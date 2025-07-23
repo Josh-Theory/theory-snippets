@@ -1,0 +1,478 @@
+{
+  "Section Boilerplate Baseline": {
+    "prefix": ["sbpb"],
+    "body": [
+      "{{ 'section-${TM_FILENAME_BASE}.css' | asset_url | stylesheet_tag }}",
+      "",
+      "{% schema %}",
+      "{",
+      "  \"name\": \"${TM_FILENAME_BASE/([^-]*)(-?)/${1:/capitalize}${2:+ }/g}\",",
+      "  \"class\": \"${TM_FILENAME_BASE} td-section\",",
+      "  \"tag\": \"section\",",
+      "  \"settings\": [],",
+      "  \"presets\": [",
+      "    {",
+      "      \"name\": \"${TM_FILENAME_BASE/([^-]*)(-?)/${1:/capitalize}${2:+ }/g}\"",
+      "    }",
+      "  ]",
+      "}",
+      "{% endschema %}"
+    ]
+  },
+  "Section Boilerplate": {
+    "prefix": ["sbp"],
+    "body": [
+      "{{ 'section-${TM_FILENAME_BASE}.css' | asset_url | stylesheet_tag }}",
+      "",
+      "$0",
+      "",
+      "{%- style -%}",
+      "/* COLORS */",
+      "#shopify-section-{{ section.id }}{",
+      "  {% if section.settings.bg_color.alpha > 0 %}",
+      "    --bg-color: {{ section.settings.bg_color }};",
+      "  {% endif %}",
+      "  {% if section.settings.text_color.alpha > 0 %}",
+      "    --text-color: {{ section.settings.text_color }};",
+      "  {% endif %}",
+      "}",
+      "",
+      "/* PADDING */",
+      "#shopify-section-{{ section.id }} {",
+      "  padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;",
+      "  padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;",
+      "}",
+      "",
+      "@media screen and (min-width: 990px) {",
+      "  #shopify-section-{{ section.id }} {",
+      "    padding-top: {{ section.settings.padding_top }}px;",
+      "    padding-bottom: {{ section.settings.padding_bottom }}px;",
+      "  }",
+      "}",
+      "{%- endstyle -%}",
+      "",
+      "{% schema %}",
+      "{",
+      "  \"name\": \"${TM_FILENAME_BASE/([^-]*)(-?)/${1:/capitalize}${2:+ }/g}\",",
+      "  \"class\": \"${TM_FILENAME_BASE} td-section\",",
+      "  \"tag\": \"section\",",
+      "  \"settings\": [",
+      "    {",
+      "        \"type\": \"header\",",
+      "        \"content\": \"Colors\",",
+      "        \"info\": \"Set to Transparent for default colors.\"",
+      "    },",
+      "    {",
+      "        \"type\": \"color\",",
+      "        \"id\": \"bg_color\",",
+      "        \"label\": \"Background color\"",
+      "    },",
+      "    {",
+      "        \"type\": \"color\",",
+      "        \"id\": \"text_color\",",
+      "        \"label\": \"Text color\"",
+      "    },",
+      "    {",
+      "        \"type\": \"header\",",
+      "        \"content\": \"Padding\",",
+      "    },",
+      "    {",
+      "        \"type\": \"range\",",
+      "        \"id\": \"padding_top\",",
+      "        \"min\": 0,",
+      "        \"max\": 100,",
+      "        \"step\": 2,",
+      "        \"unit\": \"px\",",
+      "        \"label\": \"Padding top\",",
+      "        \"default\": 0",
+      "    },",
+      "    {",
+      "        \"type\": \"range\",",
+      "        \"id\": \"padding_bottom\",",
+      "        \"min\": 0,",
+      "        \"max\": 100,",
+      "        \"step\": 2,",
+      "        \"unit\": \"px\",",
+      "        \"label\": \"Padding bottom\",",
+      "        \"default\": 0",
+      "    }  ",
+      "  ],",
+      "  \"presets\": [",
+      "    {",
+      "      \"name\": \"${TM_FILENAME_BASE/([^-]*)(-?)/${1:/capitalize}${2:+ }/g}\"",
+      "    }",
+      "  ]",
+      "}",
+      "{% endschema %}"
+    ]
+  },
+  "Swiper Boilerplate": {
+    "prefix": ["swp", "swiper"],
+    "body": [
+      "{%- capture sliderOptions -%}",
+      "  {",
+      "    \"centeredSlides\": true,",
+      "    \"slidesPerView\": 1,",
+      "    \"spaceBetween\": 10,",
+      "    \"loop\": {{ section.settings.loop }},",
+      "    \"breakpoints\": {",
+      "      \"450\": {",
+      "        \"slidesPerView\": \"auto\"",
+      "      }",
+      "    }",
+      "  }  ",
+      "{%- endcapture -%}",
+      "",
+      "{% if ${1:section.blocks.size > 0} %}",
+      "  <swiper-slider data-swiper-options='{{sliderOptions}}'>",
+      "    <div class=\"swiper ${TM_FILENAME_BASE}__swiper\" data-swiper>",
+      "      <div class=\"swiper-wrapper ${TM_FILENAME_BASE}__swiper-wrapper\">",
+      "        {% for ${2:block} in ${3:section.blocks} %}",
+      "          <div class=\"swiper-slide ${TM_FILENAME_BASE}__slide\" data-swiper-slide>",
+      "            $0",
+      "          </div>",
+      "        {% endfor %}",
+      "      </div>",
+      "    </div>",
+      "  </swiper-slider>",
+      "{% endif %}"
+    ]
+  },
+  "Javascript asset":{
+    "prefix": ["js", "jsa"],
+    "body": [
+      "<script src='{{ 'section-${TM_FILENAME_BASE}.js' | asset_url }}' defer></script>"
+    ]
+  },
+  "Javascript module":{
+    "prefix": ["jm", "jsm"],
+    "body": [
+      "<script src='{{ 'component-${TM_FILENAME_BASE}.js' | asset_url }}' type='module'></script>"
+    ]
+  },
+  "CSS asset":{
+    "prefix": ["css"],
+    "body": [
+      "{{ 'section-${TM_FILENAME_BASE}.css' | asset_url | stylesheet_tag }}"
+    ]
+  },
+  "Style tag":{
+    "prefix": ["style"],
+    "body": [
+      "{%- style -%}",
+      "  $0",
+      "{%- endstyle -%}"
+    ]
+  },
+  "Section style boilerplate":{
+    "prefix": ["sstyle", "secstyle"],
+    "body": [
+      "{%- style -%}",
+      "  /* COLORS */",
+      "  #shopify-section-{{ section.id }}{",
+      "    {% if section.settings.bg_color.alpha > 0 %}",
+      "      --bg-color: {{ section.settings.bg_color }};",
+      "    {% endif %}",
+      "    {% if section.settings.text_color.alpha > 0 %}",
+      "      --text-color: {{ section.settings.text_color }};",
+      "    {% endif %}",
+      "  }",
+      "",
+      "  /* PADDING */",
+      "  #shopify-section-{{ section.id }} {",
+      "    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;",
+      "    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;",
+      "  }",
+      "",
+      "  @media screen and (min-width: 990px) {",
+      "    #shopify-section-{{ section.id }} {",
+      "      padding-top: {{ section.settings.padding_top }}px;",
+      "      padding-bottom: {{ section.settings.padding_bottom }}px;",
+      "    }",
+      "  }",
+      "{%- endstyle -%}"
+    ]
+  },
+  "Block style boilerplate":{
+    "prefix": ["bstyle", "blockstyle"],
+    "body": [
+      "{%- style -%}",
+      "  /* COLORS */",
+      "  .block--{{ block.id }}{",
+      "    {% if block.settings.bg_color.alpha > 0 %}",
+      "      --bg-color: {{ block.settings.bg_color }};",
+      "    {% endif %}",
+      "    {% if block.settings.text_color.alpha > 0 %}",
+      "      --text-color: {{ block.settings.text_color }};",
+      "    {% endif %}",
+      "  }",
+      "",
+      "  /* PADDING */",
+      "  .block--{{ block.id }} {",
+      "    padding-top: {{ block.settings.padding_top | times: 0.75 | round: 0 }}px;",
+      "    padding-bottom: {{ block.settings.padding_bottom | times: 0.75 | round: 0 }}px;",
+      "  }",
+      "",
+      "  @media screen and (min-width: 990px) {",
+      "    .block--{{ block.id }} {",
+      "      padding-top: {{ block.settings.padding_top }}px;",
+      "      padding-bottom: {{ block.settings.padding_bottom }}px;",
+      "    }",
+      "  }",
+      "{%- endstyle -%}"
+    ]
+  },
+  "Badge": {
+    "prefix": ["badge"],
+    "body": [
+      "{% if object.metafields.custom.badge != blank %}",
+      "  <span",
+      "    class='td-badge {{ class }}'",
+      "    style='color: {{ object.metafields.custom.badge.value.text_color }}; background-color: {{ object.metafields.custom.badge.value.background_color }};'",
+      "  >",
+      "  {{ object.metafields.custom.badge.value.text }}",
+      " </span>",
+      "{% endif %}"
+    ]
+  },
+  "Base Class": {
+    "prefix": ["bclass, bc"],
+    "body": [
+      "class='${TM_FILENAME_BASE}$1'"
+    ]
+  },
+  "Utility Classes": {
+    "prefix": ["utility, uclass"],
+    "body": [
+      " class='$0td-text-{{ section.settings.content_alignment }} {% unless section.settings.page_layout == 'full-width' %}td-page-width {% unless section.settings.page_layout == 'normal' %} td-page-width-{{ section.settings.page_layout }}{% endunless %}{% endunless %}'"
+    ]
+  },
+  "Render TD Image": {
+    "prefix": ["rimg, rtdimg"],
+    "body": [
+      "{% render 'td-image', object_image: ${1:section.settings.image}, class: '${TM_FILENAME_BASE}__image$2' %}$0"
+    ]
+  },
+  "Render TD Badge": {
+    "prefix": ["rbdg, rtdbadge, rabadge, rbdge"],
+    "body": [
+      "{% render 'td-badge', object: ${1:product}, class: '${TM_FILENAME_BASE}__badge$2' %}$0"
+    ]
+  },
+  "If Title": {
+    "prefix": ["ifti, iti, iftitle"],
+    "body": [
+      "{% if ${1:section.settings.title} != blank %}",
+      "  <h2 class='${TM_FILENAME_BASE}__title td-title$2'>{{ ${1:section.settings.title} }}</h2>",
+      "{% endif %}"
+    ]
+  },
+  "If Text": {
+    "prefix": ["ifte, ite, iftext"],
+    "body": [
+      "{% if ${1:section.settings.text} != blank %}",
+      "  <div class='${TM_FILENAME_BASE}__text td-text$2'>{{ ${1:section.settings.text} }}</div>",
+        "{% endif %}"
+    ]
+  },
+  "If Image": {
+    "prefix": ["ifi, iimg, ifimage"],
+    "body": [
+      "{% if ${1:section.settings.image} != blank %}",
+      "  {% render 'td-image', object_image: ${1:section.settings.image}, class: '${TM_FILENAME_BASE}__image$2' %}",
+      "{% endif %}"
+    ]
+  },
+  "If Button": {
+    "prefix": ["ifb, ibtn, ifbutton"],
+    "body": [
+      "{% if ${1:section.settings.link} != blank and ${2:section.settings.cta} != blank %}",
+      "  <a href='{{ ${1:section.settings.link} }}' class='${TM_FILENAME_BASE}__button td-button$3'>{{ ${2:section.settings.cta} }}</a>",
+      "{% endif %}"
+    ]
+  },
+  "Liquid tag": {
+    "prefix": ["liq"],
+    "body": [
+      "{% liquid $0%}"
+    ]
+  },
+  "Duplicate comment":{
+    "prefix": ["dupe"],
+    "body": [
+      "{% comment %} Theory copy of ${TM_FILENAME/(^td-)?(.*?)/$2/} {% endcomment %}"
+    ]
+  },
+  "Metaobject loop":{
+    "prefix": ["mloop, metaobjectloop"],
+    "body": [
+      "{% for object in shop.metaobjects.${1:object_type}.values %}",
+      "  $0",
+      "{% endfor %}"
+    ]
+  },
+  "Richtext metaoject loop":{
+    "prefix": ["rml, mlr, rmetaobjectloop"],
+    "body": [
+      "{% for object in shop.metaobjects.${1:object_type}.values %}",
+      "  {{ object.${2:text} | metafield_tag }}$0",
+      "{% endfor %}"
+    ]
+  },
+  "Link Option":{
+    "prefix": ["lopt, link option"],
+    "body": [
+      "{% if ${1:section.settings.url} != blank %}",
+      "  <a href=\"{{ ${1:section.settings.url} }}\" class=\"${TM_FILENAME_BASE}__${2:container} ${TM_FILENAME_BASE}__${2:container}--link\">",
+      "{% else %}",
+      "  <div class=\"${TM_FILENAME_BASE}__${2:container}\">",
+      "{% endif %}",
+      "  $0",
+      "{% if ${1:section.settings.url} != blank %}",
+      "  </a>",
+      "{% else %}",
+      "  </div>",
+      "{% endif %}"
+    ]
+  },
+  "If Main Title": {
+    "prefix": ["mt, ifmt, imt, ifmain"],
+    "body": [
+      "{% if ${1:section.settings.title} != blank %}",
+      "  {% if section.index == 1 %}<h1{% else %}<h2{% endif %} class='${TM_FILENAME_BASE}__title td-title$2'>{{ ${1:section.settings.title} }}{% if section.index == 1 %}</h1{% else %}</h2{% endif %}>",
+      "{% endif %}"
+    ]
+  },
+  "Button Schema":{
+    "prefix": ["_button"],
+    "body": [
+      "{",
+      "  \"type\": \"header\",",
+      "  \"content\": \"Button\"",
+      "},",
+      "{",
+      "  \"type\": \"url\",",
+      "  \"id\": \"link\",",
+      "  \"label\": \"Button link\"",
+      "},",
+      "{",
+      "  \"type\": \"text\",",
+      "  \"id\": \"cta\",",
+      "  \"label\": \"Button CTA\"",
+      "},"
+    ]
+  },
+  "Collection List Schema":{
+    "prefix": ["_cl","_clist"],
+    "body": [
+      "{",
+      "  \"type\": \"collection_list\",",
+      "  \"id\": \"collection_list\",",
+      "  \"label\": \"Collections\"",
+      "}"
+    ]
+  },
+  "Layout Schema":{
+    "prefix": ["_layout"],
+    "body": [
+      "    {",
+      "      \"type\": \"header\",",
+      "      \"content\": \"Layout\"",
+      "    },",
+      "    {",
+      "      \"type\": \"select\",",
+      "      \"id\": \"page_layout\",",
+      "      \"label\": \"Content width\",",
+      "      \"default\": \"normal\",",
+      "      \"options\": [",
+      "        {",
+      "         \"value\": \"full-width\",",
+      "         \"label\": \"Full width\"",
+      "        },",
+      "        {",
+      "         \"value\": \"wide\",",
+      "         \"label\": \"Wide\"",
+      "        },",
+      "        {",
+      "         \"value\": \"normal\",",
+      "         \"label\": \"Normal\"",
+      "        },",
+      "        {",
+      "         \"value\": \"narrow\",",
+      "         \"label\": \"Narrow\"",
+      "        },",
+      "        {",
+      "         \"value\": \"slim\",",
+      "         \"label\": \"Slim\"",
+      "        }",
+      "    ]",
+      "    },",
+      "    {",
+      "      \"type\": \"select\",",
+      "      \"id\": \"content_alignment\",",
+      "      \"options\": [",
+      "        {",
+      "          \"value\": \"left\",",
+      "          \"label\": \"Left\"",
+      "        },",
+      "        {",
+      "          \"value\": \"center\",",
+      "          \"label\": \"Centered\"",
+      "        },",
+      "        {",
+      "         \"value\": \"right\",",
+      "         \"label\": \"Right\"",
+      "        }",
+      "     ],",
+      "     \"default\": \"center\",",
+      "     \"label\": \"Text alignment\"",
+      "    },",
+      "    {",
+      "        \"type\": \"header\",",
+      "        \"content\": \"Colors\",",
+      "        \"info\": \"Set to Transparent for default colors.\"",
+      "    },",
+      "    {",
+      "        \"type\": \"color\",",
+      "        \"id\": \"bg_color\",",
+      "        \"label\": \"Background color\"",
+      "    },",
+      "    {",
+      "        \"type\": \"color\",",
+      "        \"id\": \"text_color\",",
+      "        \"label\": \"Text color\"",
+      "    },",
+      "    {",
+      "        \"type\": \"header\",",
+      "        \"content\": \"Custom padding\",",
+      "        \"info\": \"Replace the vertical spacing of this section with new settings.\"",
+      "    },",
+      "    {",
+      "        \"type\": \"checkbox\",",
+      "        \"id\": \"custom_padding\",",
+      "        \"label\": \"Enabled\",",
+      "        \"default\": false",
+      "    },",
+      "    {",
+      "        \"type\": \"range\",",
+      "        \"id\": \"padding_top\",",
+      "        \"min\": 0,",
+      "        \"max\": 100,",
+      "        \"step\": 2,",
+      "        \"unit\": \"px\",",
+      "        \"label\": \"Padding top\",",
+      "        \"default\": 0",
+      "    },",
+      "    {",
+      "        \"type\": \"range\",",
+      "        \"id\": \"padding_bottom\",",
+      "        \"min\": 0,",
+      "        \"max\": 100,",
+      "        \"step\": 2,",
+      "        \"unit\": \"px\",",
+      "        \"label\": \"Padding bottom\",",
+      "        \"default\": 0",
+      "    }  "
+    ]
+  }
+}

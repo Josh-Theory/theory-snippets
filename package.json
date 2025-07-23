@@ -1,0 +1,25 @@
+{
+  "name": "td-snippets",
+  "displayName": "TD Snippets",
+  "description": "A collection of useful code snippets",
+  "version": "1.0.0",
+  "publisher": "josh-theory",
+  "engines": {
+    "vscode": "^1.81.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "css",
+        "path": "./snippets/css-snippets.json"
+      },
+      {
+        "language": "liquid",
+        "path": "./snippets/liquid-snippets.json"
+      }
+    ]
+  }
+}
