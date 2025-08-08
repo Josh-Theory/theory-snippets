@@ -343,6 +343,16 @@
       "{% endif %}"
     ]
   },
+  "Color Scheme Schema":{
+    "prefix": ["_scheme"],
+    "body": [
+      "{",
+      "  \"type\": \"color_scheme\",",
+      "  \"id\": \"color_scheme\",",
+      "  \"label\": \"Color scheme\"",
+      "},"
+    ]
+  },
   "Button Schema":{
     "prefix": ["_button"],
     "body": [
