@@ -353,6 +353,16 @@
       "},"
     ]
   },
+  "Color Background Schema":{
+    "prefix": ["_bgc"],
+    "body": [
+      "{",
+      "  \"type\": \"color_background\",",
+      "  \"id\": \"bg_color\",",
+      "  \"label\": \"Background color\"",
+      "},"
+    ]
+  },
   "Button Schema":{
     "prefix": ["_button"],
     "body": [
