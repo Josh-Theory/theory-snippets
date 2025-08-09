@@ -300,7 +300,13 @@
   "Duplicate comment":{
     "prefix": ["dupe"],
     "body": [
-      "{% comment %} Theory copy of ${TM_FILENAME/(^td-)?(.*?)/$2/} {% endcomment %}"
+      "{% comment %} Copy of ${TM_FILENAME/(^td-)?(.*?)/$2/} {% endcomment %}"
+    ]
+  },
+  "Duplicate text":{
+    "prefix": ["dupetext, dtext"],
+    "body": [
+      "{% comment %} Copy of ${TM_FILENAME/(^td-)?(.*?)/$2/} {% endcomment %}"
     ]
   },
   "Metaobject loop":{
