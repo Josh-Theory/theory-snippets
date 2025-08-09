@@ -193,35 +193,6 @@
       "{%- endstyle -%}"
     ]
   },
-  "Block style boilerplate":{
-    "prefix": ["bstyle", "blockstyle"],
-    "body": [
-      "{%- style -%}",
-      "  /* COLORS */",
-      "  .block--{{ block.id }}{",
-      "    {% if block.settings.bg_color.alpha > 0 %}",
-      "      --bg-color: {{ block.settings.bg_color }};",
-      "    {% endif %}",
-      "    {% if block.settings.text_color.alpha > 0 %}",
-      "      --text-color: {{ block.settings.text_color }};",
-      "    {% endif %}",
-      "  }",
-      "",
-      "  /* PADDING */",
-      "  .block--{{ block.id }} {",
-      "    padding-top: {{ block.settings.padding_top | times: 0.75 | round: 0 }}px;",
-      "    padding-bottom: {{ block.settings.padding_bottom | times: 0.75 | round: 0 }}px;",
-      "  }",
-      "",
-      "  @media screen and (min-width: 990px) {",
-      "    .block--{{ block.id }} {",
-      "      padding-top: {{ block.settings.padding_top }}px;",
-      "      padding-bottom: {{ block.settings.padding_bottom }}px;",
-      "    }",
-      "  }",
-      "{%- endstyle -%}"
-    ]
-  },
   "Badge": {
     "prefix": ["badge"],
     "body": [
@@ -239,12 +210,6 @@
     "prefix": ["bclass, bc"],
     "body": [
       "class='${TM_FILENAME_BASE}$1'"
-    ]
-  },
-  "Utility Classes": {
-    "prefix": ["utility, uclass"],
-    "body": [
-      " class='$0td-text-{{ section.settings.content_alignment }} {% unless section.settings.page_layout == 'full-width' %}td-page-width {% unless section.settings.page_layout == 'normal' %} td-page-width-{{ section.settings.page_layout }}{% endunless %}{% endunless %}'"
     ]
   },
   "Render TD Image": {
