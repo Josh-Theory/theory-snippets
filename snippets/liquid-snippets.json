@@ -297,6 +297,14 @@
       "{% liquid $0%}"
     ]
   },
+  "Doc tag":{
+    "prefix": ["doctag"],
+    "body": [
+      "{%- doc -%}",
+      "  $0",
+      "{%- enddoc -%}"
+    ]
+  },
   "Duplicate comment":{
     "prefix": ["dupe"],
     "body": [
