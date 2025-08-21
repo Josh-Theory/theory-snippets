@@ -282,6 +282,18 @@
       "{% comment %} Copy of ${TM_FILENAME/(^td-)?(.*?)/$2/} {% endcomment %}"
     ]
   },
+  "Themecheck disable": {
+    "prefix": ["disable", "themecheckdisable"],
+    "body": [
+      "{% # theme-check-disable %}"
+    ]
+  },
+  "Theme check enable": {
+    "prefix": ["enable", "themecheckenable"],
+    "body": [
+      "{% # theme-check-enable %}"
+    ]
+  },
   "Metaobject loop":{
     "prefix": ["mloop, metaobjectloop"],
     "body": [
