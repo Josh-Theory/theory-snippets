@@ -212,16 +212,16 @@
       "class='${TM_FILENAME_BASE}$1'"
     ]
   },
-  "Render TD Image": {
-    "prefix": ["rimg, rtdimg"],
+  "Image Tag": {
+    "prefix": ["imgtag"],
     "body": [
-      "{% render 'td-image', object_image: ${1:section.settings.image}, class: '${TM_FILENAME_BASE}__image$2' %}$0"
+      "{{ ${1:section.settings.image} | image_url: width: ${3:2000} | image_tag: alt: ${1:section.settings.image}.alt, loading: 'lazy', class: '${TM_FILENAME_BASE}__image$2' }}"
     ]
   },
   "Render TD Badge": {
     "prefix": ["rbdg, rtdbadge, rabadge, rbdge"],
     "body": [
-      "{% render 'td-badge', object: ${1:product}, class: '${TM_FILENAME_BASE}__badge$2' %}$0"
+      "{% render 'td-badge', object: ${1:product}, class: '${TM_FILENAME_BASE}__badge$2' %}"
     ]
   },
   "If Title": {
@@ -244,7 +244,7 @@
     "prefix": ["ifi, iimg, ifimage"],
     "body": [
       "{% if ${1:section.settings.image} != blank %}",
-      "  {% render 'td-image', object_image: ${1:section.settings.image}, class: '${TM_FILENAME_BASE}__image$2' %}",
+      "  {{ ${1:section.settings.image} | image_url: width: ${3:2000} | image_tag: alt: ${1:section.settings.image}.alt, loading: 'lazy', class: '${TM_FILENAME_BASE}__image$2' }}",
       "{% endif %}"
     ]
   },
@@ -381,109 +381,6 @@
       "  \"id\": \"collection_list\",",
       "  \"label\": \"Collections\"",
       "}"
-    ]
-  },
-  "Layout Schema":{
-    "prefix": ["_layout"],
-    "body": [
-      "    {",
-      "      \"type\": \"header\",",
-      "      \"content\": \"Layout\"",
-      "    },",
-      "    {",
-      "      \"type\": \"select\",",
-      "      \"id\": \"page_layout\",",
-      "      \"label\": \"Content width\",",
-      "      \"default\": \"normal\",",
-      "      \"options\": [",
-      "        {",
-      "         \"value\": \"full-width\",",
-      "         \"label\": \"Full width\"",
-      "        },",
-      "        {",
-      "         \"value\": \"wide\",",
-      "         \"label\": \"Wide\"",
-      "        },",
-      "        {",
-      "         \"value\": \"normal\",",
-      "         \"label\": \"Normal\"",
-      "        },",
-      "        {",
-      "         \"value\": \"narrow\",",
-      "         \"label\": \"Narrow\"",
-      "        },",
-      "        {",
-      "         \"value\": \"slim\",",
-      "         \"label\": \"Slim\"",
-      "        }",
-      "    ]",
-      "    },",
-      "    {",
-      "      \"type\": \"select\",",
-      "      \"id\": \"content_alignment\",",
-      "      \"options\": [",
-      "        {",
-      "          \"value\": \"left\",",
-      "          \"label\": \"Left\"",
-      "        },",
-      "        {",
-      "          \"value\": \"center\",",
-      "          \"label\": \"Centered\"",
-      "        },",
-      "        {",
-      "         \"value\": \"right\",",
-      "         \"label\": \"Right\"",
-      "        }",
-      "     ],",
-      "     \"default\": \"center\",",
-      "     \"label\": \"Text alignment\"",
-      "    },",
-      "    {",
-      "        \"type\": \"header\",",
-      "        \"content\": \"Colors\",",
-      "        \"info\": \"Set to Transparent for default colors.\"",
-      "    },",
-      "    {",
-      "        \"type\": \"color\",",
-      "        \"id\": \"bg_color\",",
-      "        \"label\": \"Background color\"",
-      "    },",
-      "    {",
-      "        \"type\": \"color\",",
-      "        \"id\": \"text_color\",",
-      "        \"label\": \"Text color\"",
-      "    },",
-      "    {",
-      "        \"type\": \"header\",",
-      "        \"content\": \"Custom padding\",",
-      "        \"info\": \"Replace the vertical spacing of this section with new settings.\"",
-      "    },",
-      "    {",
-      "        \"type\": \"checkbox\",",
-      "        \"id\": \"custom_padding\",",
-      "        \"label\": \"Enabled\",",
-      "        \"default\": false",
-      "    },",
-      "    {",
-      "        \"type\": \"range\",",
-      "        \"id\": \"padding_top\",",
-      "        \"min\": 0,",
-      "        \"max\": 100,",
-      "        \"step\": 2,",
-      "        \"unit\": \"px\",",
-      "        \"label\": \"Padding top\",",
-      "        \"default\": 0",
-      "    },",
-      "    {",
-      "        \"type\": \"range\",",
-      "        \"id\": \"padding_bottom\",",
-      "        \"min\": 0,",
-      "        \"max\": 100,",
-      "        \"step\": 2,",
-      "        \"unit\": \"px\",",
-      "        \"label\": \"Padding bottom\",",
-      "        \"default\": 0",
-      "    }  "
     ]
   }
 }
