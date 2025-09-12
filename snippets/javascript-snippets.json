@@ -1,0 +1,24 @@
+{
+  "Web Component Boilerplate": {
+    "prefix": ["wcb", "web"],
+    "body": [
+      "if (!customElements.get('${TM_FILENAME_BASE/^(section-)//i}')) {",
+      "  class ${TM_FILENAME_BASE/^(?:section-)?(td)|^(?:section-)?([a-z0-9]+)|-(td)|-([a-z0-9]+)/${1:/upcase}${2:/capitalize}${3:/upcase}${4:/capitalize}/gi} extends HTMLElement {",
+      "    constructor() {",
+      "      super();",
+      "    }",
+      "",
+      "    connectedCallback() {",
+      "      try {",
+      "        ",
+      "      } catch (error) {",
+      "        console.error('[${TM_FILENAME_BASE/^(?:section-)?(td)|^(?:section-)?([a-z0-9]+)|-(td)|-([a-z0-9]+)/${1:/upcase}${2:/capitalize}${3:/upcase}${4:/capitalize}/gi}] Initialization error:', error);",
+      "      }",
+      "    }",
+      "  }",
+      "",
+      "  customElements.define('${TM_FILENAME_BASE/^(section-)//i}', ${TM_FILENAME_BASE/^(?:section-)?(td)|^(?:section-)?([a-z0-9]+)|-(td)|-([a-z0-9]+)/${1:/upcase}${2:/capitalize}${3:/upcase}${4:/capitalize}/gi});",
+      "}"
+    ]
+  }
+}
