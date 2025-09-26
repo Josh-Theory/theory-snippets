@@ -88,6 +88,12 @@
       "}"
     ]
   },
+  "Pause animation":{
+    "prefix": ["pause animation"],
+    "body": [
+      "animation-play-state: paused;"
+    ]
+  },
   "Line clamp":{
     "prefix": ["Line clamp", "lc"],
     "body": [

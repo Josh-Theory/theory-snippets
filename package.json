@@ -2,7 +2,7 @@
   "name": "td-snippets",
   "displayName": "TD Snippets",
   "description": "A collection of useful code snippets",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "publisher": "josh-theory",
   "engines": {
     "vscode": "^1.81.0"
@@ -15,7 +15,7 @@
     "theory",
     "td"
   ],
-  "icon": "tdwizard.png",
+  "icon": "./images/tdwizard.png",
   "contributes": {
     "snippets": [
       {
