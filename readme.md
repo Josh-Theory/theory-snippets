@@ -1,6 +1,6 @@
 ## Theory Snippets
 
-Liquid, CSS, and JS snippets for common patterns and features that are not included in the official extension. These will pull from the filename to generate classes, schema names, etc. DM me for requests.
+Liquid, CSS, and JS snippets for common patterns and features that are not included in the official extension. These will pull from the filename to generate classes, schema names, etc. DM Josh for requests.
 
 ## Liquid Snippets (37)
 

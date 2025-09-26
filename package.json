@@ -15,6 +15,7 @@
     "theory",
     "td"
   ],
+  "icon": "tdwizard.png",
   "contributes": {
     "snippets": [
       {
