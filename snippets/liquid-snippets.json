@@ -164,6 +164,22 @@
       "{%- endstyle -%}"
     ]
   },
+  "Stylesheet tag":{
+    "prefix": ["ts", "st", "stylesheet tag"],
+    "body": [
+      "{%- stylesheet -%}",
+      "  $0",
+      "{%- endstylesheet -%}"
+    ]
+  },
+  "Javascript tag":{
+    "prefix": ["js", "jst", "javascript tag"],
+    "body": [
+      "{%- javascript -%}",
+      "  $0",
+      "{%- endjavascript -%}"
+    ]
+  },
   "Section style boilerplate":{
     "prefix": ["sstyle", "secstyle"],
     "body": [
@@ -218,6 +234,42 @@
       "{{ ${1:section.settings.image} | image_url: width: ${3:2000} | image_tag: alt: ${1:section.settings.image}.alt, loading: 'lazy', class: '${TM_FILENAME_BASE}__image$2' }}"
     ]
   },
+  "Block Content": {
+    "prefix": ["cb, contentblock"],
+    "body": [
+      "{% content_for 'block', type: '${1:TM_FILENAME_BASE}', id: '${1:TM_FILENAME_BASE}' %}"
+    ]
+  },
+  "Blocks Content": {
+    "prefix": ["cbs", "contentblocks"],
+    "body": [
+      "{% content_for 'blocks' %}"
+    ]
+  },
+  "Product Block Content": {
+    "prefix": ["cbp, contentblockproduct"],
+    "body": [
+      "{% content_for 'block', type: '${1:TM_FILENAME_BASE}', id: 'product-details', closest.product: closest.product %}"
+    ]
+  },
+  "Swiper Block Content": {
+    "prefix": ["cbsp, contentblockswiper"],
+    "body": [
+      "{% # theme-check-disable %}",
+      "{% comment %} Disable 'content_for block capture' check {% endcomment %}",
+      "{% liquid",
+      "  if section.blocks.size > 0",
+      "    capture slide_contents",
+      "    content_for 'blocks'",
+      "    endcapture",
+      "    content_for 'block', type: '_td-slider', id: 'static-slider', children: slide_contents, classes: '${TM_FILENAME_BASE}__slider'",
+      "  else",
+      "    render 'td-no-content', context: \"slides\"",
+      "  endif",
+      "%}",
+      "{% # theme-check-enable %}"
+    ]
+  },
   "Render TD Badge": {
     "prefix": ["rbdg, rtdbadge, rabadge, rbdge"],
     "body": [
@@ -260,6 +312,12 @@
     "prefix": ["liq"],
     "body": [
       "{% liquid $0%}"
+    ]
+  },
+  "Attributes attribute":{
+    "prefix": ["attrs, attributes"],
+    "body": [
+      " style=\"{% render 'td-style-attributes', settings: section.settings %}\""
     ]
   },
   "Doc tag":{
