@@ -223,7 +223,7 @@
     ]
   },
   "Base Class": {
-    "prefix": ["bclass, bc"],
+    "prefix": ["bclass", "bc"],
     "body": [
       "class='${TM_FILENAME_BASE}$1'"
     ]
@@ -235,9 +235,9 @@
     ]
   },
   "Block Content": {
-    "prefix": ["cb, contentblock"],
+    "prefix": ["cb", "contentblock"],
     "body": [
-      "{% content_for 'block', type: '${1:TM_FILENAME_BASE}', id: '${1:TM_FILENAME_BASE}' %}"
+      "{% content_for 'block', type: '${1:${TM_FILENAME_BASE}}', id: '${1:${TM_FILENAME_BASE}}' %}"
     ]
   },
   "Blocks Content": {
@@ -247,13 +247,13 @@
     ]
   },
   "Product Block Content": {
-    "prefix": ["cbp, contentblockproduct"],
+    "prefix": ["cbp", "contentblockproduct"],
     "body": [
-      "{% content_for 'block', type: '${1:TM_FILENAME_BASE}', id: 'product-details', closest.product: closest.product %}"
+      "{% content_for 'block', type: '${1:${TM_FILENAME_BASE}}', id: 'product-details', closest.product: closest.product %}"
     ]
   },
   "Swiper Block Content": {
-    "prefix": ["cbsp, contentblockswiper"],
+    "prefix": ["cbsp", "contentblockswiper"],
     "body": [
       "{% # theme-check-disable %}",
       "{% comment %} Disable 'content_for block capture' check {% endcomment %}",
@@ -271,13 +271,13 @@
     ]
   },
   "Render TD Badge": {
-    "prefix": ["rbdg, rtdbadge, rabadge, rbdge"],
+    "prefix": ["rbdg", "rtdbadge", "rabadge", "rbdge"],
     "body": [
       "{% render 'td-badge', object: ${1:product}, class: '${TM_FILENAME_BASE}__badge$2' %}"
     ]
   },
   "If Title": {
-    "prefix": ["ifti, iti, iftitle"],
+    "prefix": ["ifti", "iti", "iftitle"],
     "body": [
       "{% if ${1:section.settings.title} != blank %}",
       "  <h2 class='${TM_FILENAME_BASE}__title td-title$2'>{{ ${1:section.settings.title} }}</h2>",
@@ -285,7 +285,7 @@
     ]
   },
   "If Text": {
-    "prefix": ["ifte, ite, iftext"],
+    "prefix": ["ifte", "ite", "iftext"],
     "body": [
       "{% if ${1:section.settings.text} != blank %}",
       "  <div class='${TM_FILENAME_BASE}__text td-text$2'>{{ ${1:section.settings.text} }}</div>",
@@ -293,7 +293,7 @@
     ]
   },
   "If Image": {
-    "prefix": ["ifi, iimg, ifimage"],
+    "prefix": ["ifi", "iimg", "ifimage"],
     "body": [
       "{% if ${1:section.settings.image} != blank %}",
       "  {{ ${1:section.settings.image} | image_url: width: ${3:2000} | image_tag: alt: ${1:section.settings.image}.alt, loading: 'lazy', class: '${TM_FILENAME_BASE}__image$2' }}",
@@ -301,7 +301,7 @@
     ]
   },
   "If Button": {
-    "prefix": ["ifb, ibtn, ifbutton"],
+    "prefix": ["ifb", "ibtn", "ifbutton"],
     "body": [
       "{% if ${1:section.settings.link} != blank and ${2:section.settings.cta} != blank %}",
       "  <a href='{{ ${1:section.settings.link} }}' class='${TM_FILENAME_BASE}__button td-button$3'>{{ ${2:section.settings.cta} }}</a>",
@@ -315,7 +315,7 @@
     ]
   },
   "Attributes attribute":{
-    "prefix": ["attrs, attributes"],
+    "prefix": ["attrs", "attributes"],
     "body": [
       " style=\"{% render 'td-style-attributes', settings: section.settings %}\""
     ]
@@ -335,7 +335,7 @@
     ]
   },
   "Duplicate text":{
-    "prefix": ["dupetext, dtext"],
+    "prefix": ["dupetext", "dtext"],
     "body": [
       "{% comment %} Copy of ${TM_FILENAME/(^td-)?(.*?)/$2/} {% endcomment %}"
     ]
@@ -353,7 +353,7 @@
     ]
   },
   "Metaobject loop":{
-    "prefix": ["mloop, metaobjectloop"],
+    "prefix": ["mloop", "metaobjectloop"],
     "body": [
       "{% for object in shop.metaobjects.${1:object_type}.values %}",
       "  $0",
@@ -361,7 +361,7 @@
     ]
   },
   "Richtext metaoject loop":{
-    "prefix": ["rml, mlr, rmetaobjectloop"],
+    "prefix": ["rml", "mlr", "rmetaobjectloop"],
     "body": [
       "{% for object in shop.metaobjects.${1:object_type}.values %}",
       "  {{ object.${2:text} | metafield_tag }}$0",
@@ -369,7 +369,7 @@
     ]
   },
   "Link Option":{
-    "prefix": ["lopt, link option"],
+    "prefix": ["lopt", "link option"],
     "body": [
       "{% if ${1:section.settings.url} != blank %}",
       "  <a href=\"{{ ${1:section.settings.url} }}\" class=\"${TM_FILENAME_BASE}__${2:container} ${TM_FILENAME_BASE}__${2:container}--link\">",
@@ -385,7 +385,7 @@
     ]
   },
   "If Main Title": {
-    "prefix": ["mt, ifmt, imt, ifmain"],
+    "prefix": ["mt", "ifmt", "imt", "ifmain"],
     "body": [
       "{% if ${1:section.settings.title} != blank %}",
       "  {% if section.index == 1 %}<h1{% else %}<h2{% endif %} class='${TM_FILENAME_BASE}__title td-title$2'>{{ ${1:section.settings.title} }}{% if section.index == 1 %}</h1{% else %}</h2{% endif %}>",
