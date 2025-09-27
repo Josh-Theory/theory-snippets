@@ -1,6 +1,6 @@
 {
-  "Section Boilerplate Baseline": {
-    "prefix": ["sbpb"],
+  "Legacy Section Boilerplate Baseline": {
+    "prefix": ["lsbpb"],
     "body": [
       "{{ 'section-${TM_FILENAME_BASE}.css' | asset_url | stylesheet_tag }}",
       "",
@@ -19,8 +19,8 @@
       "{% endschema %}"
     ]
   },
-  "Section Boilerplate": {
-    "prefix": ["sbp"],
+  "Legacy Section Boilerplate": {
+    "prefix": ["lsbp"],
     "body": [
       "{{ 'section-${TM_FILENAME_BASE}.css' | asset_url | stylesheet_tag }}",
       "",
@@ -106,8 +106,8 @@
       "{% endschema %}"
     ]
   },
-  "Swiper Boilerplate": {
-    "prefix": ["swp", "swiper"],
+  "Legacy Swiper Boilerplate": {
+    "prefix": ["lswp", "lswiper"],
     "body": [
       "{%- capture sliderOptions -%}",
       "  {",
@@ -180,8 +180,8 @@
       "{%- endjavascript -%}"
     ]
   },
-  "Section style boilerplate":{
-    "prefix": ["sstyle", "secstyle"],
+  "Legacy Section style boilerplate":{
+    "prefix": ["lsstyle", "lsecstyle"],
     "body": [
       "{%- style -%}",
       "  /* COLORS */",
@@ -403,7 +403,7 @@
     ]
   },
   "Color Background Schema":{
-    "prefix": ["_bgc"],
+    "prefix": ["_bgc", "_backgroundcolor"],
     "body": [
       "{",
       "  \"type\": \"color_background\",",

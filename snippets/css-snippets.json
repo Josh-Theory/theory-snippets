@@ -47,7 +47,7 @@
     ]
   },
   "Flex gallery":{
-    "prefix": ["gallery, gf"],
+    "prefix": ["gallery", "gf"],
     "body": [
       "display: flex;",
       "--column-count: 2;",
@@ -147,6 +147,46 @@
     "prefix": ["M5","M1920"],
     "body": [
       "@media screen and (min-width: 1920px){",
+      "    $1",
+      "}"
+    ]
+  },
+  "MXQ 767px":{
+    "prefix": ["MXQ1","MXQ767"],
+    "body": [
+      "@media screen and (max-width: 767px){",
+      "    $1",
+      "}"
+    ]
+  },
+  "MXQ 1024px":{
+    "prefix": ["MXQ2","MXQ1024"],
+    "body": [
+      "@media screen and (max-width: 1024px){",
+      "    $1",
+      "}"
+    ]
+  },
+  "MXQ 1280px":{
+    "prefix": ["MXQ3","MXQ1280"],
+    "body": [
+      "@media screen and (max-width: 1280px){",
+      "    $1",
+      "}"
+    ]
+  },
+  "MXQ 1440px":{
+    "prefix": ["MXQ4","MXQ1440"],
+    "body": [
+      "@media screen and (max-width: 1440px){",
+      "    $1",
+      "}"
+    ]
+  },
+  "MXQ 1920px":{
+    "prefix": ["MXQ5","MXQ1920"],
+    "body": [
+      "@media screen and (max-width: 1920px){",
       "    $1",
       "}"
     ]
