@@ -1,6 +1,6 @@
 {
   "Block Boilerplate": {
-    "prefix": ["bb"],
+    "prefix": ["bbp"],
     "body": [
       "{% doc %}",
       "  ${TM_FILENAME_BASE} block",
