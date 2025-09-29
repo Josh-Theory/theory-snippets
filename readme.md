@@ -2,10 +2,12 @@
 
 Liquid, CSS, and JS snippets for common patterns and features that are not included in the official extension. These will pull from the filename to generate classes, schema names, etc. DM Josh for requests.
 
-## Liquid Snippets (37)
+## Liquid Snippets (39)
 
 | Title | Prefixes | Description |
 |---|---|---|
+| Block Boilerplate | `bb` | Boilerplate for a block file with example `content_for` and schema/preset. |
+| Section Boilerplate | `sbp` | Modern section scaffold with attribute-based styles, color/padding settings, and schema. |
 | Legacy Section Boilerplate Baseline | `lsbpb` | Minimal Shopify section with schema and stylesheet link. |
 | Legacy Section Boilerplate | `lsbp` | Full Shopify section scaffold with color and padding settings and schema. |
 | Legacy Swiper Boilerplate | `lswp`, `lswiper` | Liquid markup to render a Swiper slider with captured options and slides. |
