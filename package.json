@@ -2,7 +2,7 @@
   "name": "td-snippets",
   "displayName": "TD Snippets",
   "description": "A collection of useful code snippets",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "publisher": "josh-theory",
   "engines": {
     "vscode": "^1.81.0"
@@ -24,7 +24,11 @@
       },
       {
         "language": "liquid",
-        "path": "./snippets/liquid-snippets.json"
+        "path": "./snippets/liquid-workflow-snippets.json"
+      },
+      {
+        "language": "liquid",
+        "path": "./snippets/liquid-language-snippets.json"
       },
       {
         "language": "javascript",

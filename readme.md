@@ -2,7 +2,7 @@
 
 Liquid, CSS, and JS snippets for common patterns and features that are not included in the official extension. These will pull from the filename to generate classes, schema names, etc. DM Josh for requests.
 
-## Liquid Snippets (39)
+## Liquid Workflow Snippets (39)
 
 | Title | Prefixes | Description |
 |---|---|---|
@@ -83,3 +83,117 @@ Liquid, CSS, and JS snippets for common patterns and features that are not inclu
 
 ---
 
+## Liquid Language Snippets
+
+Actively maintained fork of the original [Shopify Liquid Template Snippets](https://marketplace.visualstudio.com/items?itemName=killalau.vscode-liquid-snippets)
+
+### Comment Tag
+
+```
+comment- // whitespace stripped
+```
+
+### Control Flow Tag
+
+```
+if
+else
+elsif
+ifelse
+unless
+case
+when
+if-     // whitespace stripped
+else-   // whitespace stripped
+elsif-  // whitespace stripped
+ifelse- // whitespace stripped
+unless- // whitespace stripped
+case-   // whitespace stripped
+when-   // whitespace stripped
+```
+
+### Iteration Tag
+
+```
+cycle
+cyclegroup
+for
+limit       // For loops option
+offset      // For loops option
+reversed    // For loops option
+break
+continue
+tablerow
+cycle-      // whitespace stripped
+cyclegroup- // whitespace stripped
+for-        // whitespace stripped
+continue-   // whitespace stripped
+tablerow-   // whitespace stripped
+```
+
+### Variable Tag
+
+```
+assign
+increment
+decrement
+capture
+assign-  // whitespace stripped
+capture- // whitespace stripped
+```
+
+### Theme Tag
+
+```
+render
+renderwith // Theme Tag {% render %} with parameters
+section
+raw
+layout
+layoutnone
+paginate
+schema
+stylesheet
+stylesheet_scss
+
+```
+
+### Schema Tag
+
+```
+_schema
+_text
+_textarea
+_image_picker
+_radio
+_select
+_checkbox
+_range
+_color
+_font
+_collection
+_product
+_blog
+_page
+_link_list
+_url
+_video
+_richtext
+_html
+_article
+_header
+_paragraph
+_blocks
+_number
+_collection_list
+_product_list
+_color_background
+_color_scheme
+_color_scheme_group
+_inline_richtext
+_liquid
+_metaobject
+_metaobject_list
+_text_alignment
+_video_file
+```
