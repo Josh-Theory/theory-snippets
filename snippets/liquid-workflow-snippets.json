@@ -400,24 +400,10 @@
       "{% endif %}"
     ]
   },
-  "Liquid tag": {
-    "prefix": ["liq"],
-    "body": [
-      "{% liquid $0%}"
-    ]
-  },
   "Attributes attribute":{
     "prefix": ["attrs", "attributes"],
     "body": [
       " style=\"{% render 'td-style-attributes', settings: section.settings %}\""
-    ]
-  },
-  "Doc tag":{
-    "prefix": ["doctag"],
-    "body": [
-      "{%- doc -%}",
-      "  $0",
-      "{%- enddoc -%}"
     ]
   },
   "Duplicate comment":{
@@ -482,26 +468,6 @@
       "{% if ${1:section.settings.title} != blank %}",
       "  {% if section.index == 1 %}<h1{% else %}<h2{% endif %} class='${TM_FILENAME_BASE}__title td-title$2'>{{ ${1:section.settings.title} }}{% if section.index == 1 %}</h1{% else %}</h2{% endif %}>",
       "{% endif %}"
-    ]
-  },
-  "Color Scheme Schema":{
-    "prefix": ["_scheme"],
-    "body": [
-      "{",
-      "  \"type\": \"color_scheme\",",
-      "  \"id\": \"color_scheme\",",
-      "  \"label\": \"Color scheme\"",
-      "},"
-    ]
-  },
-  "Color Background Schema":{
-    "prefix": ["_bgc", "_backgroundcolor"],
-    "body": [
-      "{",
-      "  \"type\": \"color_background\",",
-      "  \"id\": \"bg_color\",",
-      "  \"label\": \"Background color\"",
-      "},"
     ]
   },
   "Button Schema":{

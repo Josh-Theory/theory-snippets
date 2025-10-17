@@ -2,7 +2,20 @@
 
 Liquid, CSS, and JS snippets for common patterns and features that are not included in the official extension. These will pull from the filename to generate classes, schema names, etc. DM Josh for requests.
 
-## Liquid Workflow Snippets (39)
+## Table of contents
+
+- [Liquid Workflow Snippets (35)](#liquid-workflow-snippets-35)
+- [JavaScript Snippets (1)](#javascript-snippets-1)
+- [CSS Snippets (24)](#css-snippets-24)
+- [Liquid Language Snippets](#liquid-language-snippets)
+  - [Comment Tag](#comment-tag)
+  - [Control Flow Tag](#control-flow-tag)
+  - [Iteration Tag](#iteration-tag)
+  - [Variable Tag](#variable-tag)
+  - [Theme Tag](#theme-tag)
+  - [Schema Tag](#schema-tag)
+
+## Liquid Workflow Snippets (35)
 
 | Title | Prefixes | Description |
 |---|---|---|
@@ -30,9 +43,7 @@ Liquid, CSS, and JS snippets for common patterns and features that are not inclu
 | If Text | `ifte`, `ite`, `iftext` | Conditional text wrapper if the text setting is present. |
 | If Image | `ifi`, `iimg`, `ifimage` | Conditional image output with sizing and lazy loading. |
 | If Button | `ifb`, `ibtn`, `ifbutton` | Conditional link button combining URL and CTA settings. |
-| Liquid tag | `liq` | Insert a `{% liquid %}` tag wrapper. |
 | Attributes attribute | `attrs`, `attributes` | Add inline style attribute via `td-style-attributes` render. |
-| Doc tag | `doctag` | Insert a `{% doc %}` block. |
 | Duplicate comment | `dupe` | Add a comment noting a duplicate of the current file. |
 | Duplicate text | `dupetext`, `dtext` | Add a comment string noting a duplicate (text variant). |
 | Themecheck disable | `disable`, `themecheckdisable` | Disable Theme Check for following lines. |
@@ -41,8 +52,6 @@ Liquid, CSS, and JS snippets for common patterns and features that are not inclu
 | Richtext metaoject loop | `rml`, `mlr`, `rmetaobjectloop` | Loop metaobjects and output a richtext metafield tag. |
 | Link Option | `lopt`, `link option` | Wrap content in `<a>` when URL provided; `<div>` otherwise. |
 | If Main Title | `mt`, `ifmt`, `imt`, `ifmain` | Conditional H1 for first section, otherwise H2. |
-| Color Scheme Schema | `_scheme` | Schema fragment for a color scheme setting. |
-| Color Background Schema | `_bgc`, `_backgroundcolor` | Schema fragment for a color background setting. |
 | Button Schema | `_button` | Schema fragment for URL and CTA fields. |
 | Collection List Schema | `_cl`, `_clist` | Schema fragment for a `collection_list` setting. |
 
@@ -91,6 +100,7 @@ Actively maintained fork of the original [Shopify Liquid Template Snippets](http
 
 ```
 comment- // whitespace stripped
+doc- // whitespace stripped
 ```
 
 ### Control Flow Tag
@@ -145,16 +155,18 @@ capture- // whitespace stripped
 ### Theme Tag
 
 ```
+content_for
 render
-renderwith // Theme Tag {% render %} with parameters
+renderwith // Theme tag {% render %} with parameters
 section
 raw
 layout
 layoutnone
+liquid
+liquid-   // whitespace stripped
 paginate
 schema
 stylesheet
-stylesheet_scss
 
 ```
 

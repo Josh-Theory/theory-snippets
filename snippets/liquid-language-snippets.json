@@ -159,6 +159,13 @@
           "{% capture ${1:variable} %}$2{% endcapture %}"
       ]
   },
+  "Tag content_for": {
+    "prefix": "content_for",
+    "description": "Theme tag: content_for",
+    "body": [
+      "{% content_for '${1:type}' %}"
+    ]
+  },
   "Tag render": {
       "prefix": "render",
       "description": "Theme tag: render",
@@ -201,6 +208,24 @@
           "{% layout none %}"
       ]
   },
+  "Tag liquid": {
+    "prefix": "liquid",
+    "description": "Theme tag: liquid",
+    "body": [
+      "{% liquid %}",
+      "\t$1",
+      "{% endliquid %}"
+    ]
+  },
+  "Tag liquid, whitespaced": {
+    "prefix": "liquid-",
+    "description": "Theme tag: liquid, whitespaced",
+    "body": [
+      "{%- liquid -%}",
+      "\t$1",
+      "{%- endliquid -%}"
+    ]
+  },
   "Tag paginate": {
       "prefix": "paginate",
       "description": "Theme tag: paginate",
@@ -232,15 +257,6 @@
           "{% endstylesheet %}"
       ]
   },
-  "Tag stylesheet for scss": {
-      "prefix": "stylesheet_scss",
-      "description": "Stylesheet tag: stylesheet for scss",
-      "body": [
-          "{% stylesheet '${1:scss}' %}",
-          "\t$2",
-          "{% endstylesheet %}"
-      ]
-  },
   "Tag javascript": {
       "prefix": "javascript",
       "description": "Javascript tag: javascript",
@@ -256,6 +272,14 @@
       "body": [
           "{%- comment -%}$1{%- endcomment -%}"
       ]
+  },
+  "Tag doc, whitespaced":{
+    "prefix": "doc-",
+    "body": [
+      "{%- doc -%}",
+      "\t$1",
+      "{%- enddoc -%}"
+    ]
   },
   "Tag if, whitespaced": {
       "prefix": "if-",
