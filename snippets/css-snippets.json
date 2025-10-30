@@ -2,7 +2,7 @@
   "Base Class":{
     "prefix": ["bc","base"],
     "body": [
-      "${TM_FILENAME_BASE/(section-)/./}$1 {",
+      ".${TM_FILENAME_BASE/(section-)/./}$1 {",
       "  $2",
       "}"
     ]
