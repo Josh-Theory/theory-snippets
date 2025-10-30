@@ -74,7 +74,7 @@
   "A11y font size value":{
     "prefix": ["afsv"],
     "body": [
-      "calc(${1:16} / var(--td-base-font-size, 16) * 1rem);"
+      "calc(${1:16} / var(--td-base-font-size, 16) * 1rem)"
     ]
   },
   "Trim RTE margins":{
