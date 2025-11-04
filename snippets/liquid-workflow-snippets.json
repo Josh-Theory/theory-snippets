@@ -6,7 +6,7 @@
       "  ${TM_FILENAME_BASE} block",
       "",
       "  @example",
-      "  {% content_for 'block', type: '${TM_FILENAME_BASE}', id: '${TM_FILENAME_BASE}-1' %}",
+      "  {% content_for 'block', type: '${TM_FILENAME_BASE}', id: '${TM_FILENAME_BASE/^_+//}-1' %}",
       "{% enddoc %}",
       "",
       "$0",
