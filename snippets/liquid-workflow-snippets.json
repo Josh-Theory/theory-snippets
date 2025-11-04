@@ -91,6 +91,26 @@
       "{% endschema %}"
     ]
   },
+  "Section Boilerplate Baseline": {
+    "prefix": ["sbpb"],
+    "body": [
+      "$0",
+      "",
+      "{% schema %}",
+      "{",
+      "  \"name\": \"${TM_FILENAME_BASE/([^-]*)(-?)/${1:/capitalize}${2:+ }/g}\",",
+      "  \"class\": \"${TM_FILENAME_BASE} td-section\",",
+      "  \"tag\": \"section\",",
+      "  \"settings\": [],",
+      "  \"presets\": [",
+      "    {",
+      "      \"name\": \"${TM_FILENAME_BASE/([^-]*)(-?)/${1:/capitalize}${2:+ }/g}\"",
+      "    }",
+      "  ]",
+      "}",
+      "{% endschema %}"
+    ]
+  },
   "Legacy Section Boilerplate Baseline": {
     "prefix": ["lsbpb"],
     "body": [
