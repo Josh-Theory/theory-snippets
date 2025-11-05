@@ -221,9 +221,9 @@
     "prefix": "liquid-",
     "description": "Theme tag: liquid, whitespaced",
     "body": [
-      "{%- liquid -%}",
+      "{%- liquid",
       "\t$1",
-      "{%- endliquid -%}"
+      "-%}"
     ]
   },
   "Tag paginate": {
