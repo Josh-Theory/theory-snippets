@@ -506,7 +506,7 @@
       "{% liquid",
       "  if section.blocks.size > 0",
       "    capture slide_contents",
-      "    content_for 'blocks'",
+      "      content_for 'blocks'",
       "    endcapture",
       "    content_for 'block', type: '_td-slider', id: 'static-slider', children: slide_contents, classes: '${TM_FILENAME_BASE}__slider'",
       "  else",
