@@ -4,7 +4,7 @@ Liquid, CSS, and JS snippets for common patterns and features that are not inclu
 
 ## Table of contents
 
-- [Liquid Workflow Snippets (35)](#liquid-workflow-snippets-35)
+- [Liquid Workflow Snippets (36)](#liquid-workflow-snippets-36)
 - [JavaScript Snippets (1)](#javascript-snippets-1)
 - [CSS Snippets (24)](#css-snippets-24)
 - [Liquid Language Snippets](#liquid-language-snippets)
@@ -15,12 +15,13 @@ Liquid, CSS, and JS snippets for common patterns and features that are not inclu
   - [Theme Tag](#theme-tag)
   - [Schema Tag](#schema-tag)
 
-## Liquid Workflow Snippets (35)
+## Liquid Workflow Snippets (36)
 
 | Title | Prefixes | Description |
 |---|---|---|
 | Block Boilerplate | `bbp` | Boilerplate for a block file with example `content_for` and schema/preset. |
 | Section Boilerplate | `sbp` | Modern section scaffold with attribute-based styles, color/padding settings, and schema. |
+| Project Section Boilerplate | `psbp` | Project section scaffold with color scheme, width, desktop/mobile padding controls, and presets. |
 | Legacy Section Boilerplate Baseline | `lsbpb` | Minimal Shopify section with schema and stylesheet link. |
 | Legacy Section Boilerplate | `lsbp` | Full Shopify section scaffold with color and padding settings and schema. |
 | Legacy Swiper Boilerplate | `lswp`, `lswiper` | Liquid markup to render a Swiper slider with captured options and slides. |
