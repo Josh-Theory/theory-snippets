@@ -198,6 +198,7 @@ _article
 _header
 _paragraph
 _blocks
+_theme_blocks
 _number
 _collection_list
 _product_list

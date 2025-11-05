@@ -425,9 +425,21 @@
           "\t\t\t$3",
           "\t\t]",
           "\t},$4",
-          "]",
-          ""
+          "]$0"
       ]
+  },
+  "Shopify Schema theme blocks": {
+    "prefix": "_theme_blocks",
+    "body": [
+        "\"blocks\": [",
+        "\t{",
+        "\t\t\"type\": \"@theme\",",
+        "\t},",
+        "\t{",
+        "\t\t\"type\": \"@app\",",
+        "\t}",
+        "]$0"
+    ]
   },
   "Shopify Schema text": {
       "prefix": "_text",

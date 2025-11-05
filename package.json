@@ -2,7 +2,7 @@
   "name": "td-snippets",
   "displayName": "TD Snippets",
   "description": "A collection of useful code snippets",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "publisher": "josh-theory",
   "engines": {
     "vscode": "^1.81.0"
