@@ -4,7 +4,7 @@ Liquid, CSS, and JS snippets for common patterns and features that are not inclu
 
 ## Table of contents
 
-- [Liquid Workflow Snippets (36)](#liquid-workflow-snippets-36)
+- [Liquid Workflow Snippets (37)](#liquid-workflow-snippets-36)
 - [JavaScript Snippets (1)](#javascript-snippets-1)
 - [CSS Snippets (24)](#css-snippets-24)
 - [Liquid Language Snippets](#liquid-language-snippets)
@@ -15,7 +15,7 @@ Liquid, CSS, and JS snippets for common patterns and features that are not inclu
   - [Theme Tag](#theme-tag)
   - [Schema Tag](#schema-tag)
 
-## Liquid Workflow Snippets (36)
+## Liquid Workflow Snippets (37)
 
 | Title | Prefixes | Description |
 |---|---|---|
