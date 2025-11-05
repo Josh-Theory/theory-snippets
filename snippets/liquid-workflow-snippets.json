@@ -149,7 +149,7 @@
       "        \"default\": 0,",
       "        \"visible_if\": \"{{ section.settings.custom_padding_mobile }}\"",
       "      }",
-      "    ]",
+      "    ],",
       "  \"presets\": [",
       "    {",
       "      \"name\": \"${TM_FILENAME_BASE/([^-]*)(-?)/${1:/capitalize}${2:+ }/g}\",",
