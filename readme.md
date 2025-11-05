@@ -21,6 +21,7 @@ Liquid, CSS, and JS snippets for common patterns and features that are not inclu
 |---|---|---|
 | Block Boilerplate | `bbp` | Boilerplate for a block file with example `content_for` and schema/preset. |
 | Section Boilerplate | `sbp` | Modern section scaffold with attribute-based styles, color/padding settings, and schema. |
+| Section Boilerplate Baseline | `sbpb` | Minimal section boilerplate with only the name/class/tag schema and presets. |
 | Project Section Boilerplate | `psbp` | Project section scaffold with color scheme, width, desktop/mobile padding controls, and presets. |
 | Legacy Section Boilerplate Baseline | `lsbpb` | Minimal Shopify section with schema and stylesheet link. |
 | Legacy Section Boilerplate | `lsbp` | Full Shopify section scaffold with color and padding settings and schema. |
