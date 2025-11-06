@@ -4,7 +4,7 @@ Liquid, CSS, and JS snippets for common patterns and features that are not inclu
 
 ## Table of contents
 
-- [Liquid Workflow Snippets (37)](#liquid-workflow-snippets-36)
+ - [Liquid Workflow Snippets (38)](#liquid-workflow-snippets-38)
 - [JavaScript Snippets (1)](#javascript-snippets-1)
 - [CSS Snippets (24)](#css-snippets-24)
 - [Liquid Language Snippets](#liquid-language-snippets)
@@ -15,11 +15,12 @@ Liquid, CSS, and JS snippets for common patterns and features that are not inclu
   - [Theme Tag](#theme-tag)
   - [Schema Tag](#schema-tag)
 
-## Liquid Workflow Snippets (37)
+## Liquid Workflow Snippets (38)
 
 | Title | Prefixes | Description |
 |---|---|---|
-| Block Boilerplate | `bbp` | Boilerplate for a block file with example `content_for` and schema/preset. |
+| Block Boilerplate | `bbp` | Boilerplate for a block file with example `content_for` and schema including theme/app blocks. |
+| Project Block Boilerplate | `pbbp` | Project block scaffold with example `content_for` and schema including theme/app blocks. |
 | Section Boilerplate | `sbp` | Modern section scaffold with attribute-based styles, color/padding settings, and schema. |
 | Section Boilerplate Baseline | `sbpb` | Minimal section boilerplate with only the name/class/tag schema and presets. |
 | Project Section Boilerplate | `psbp` | Project section scaffold with color scheme, width, desktop/mobile padding controls, and presets. |
@@ -36,10 +37,10 @@ Liquid, CSS, and JS snippets for common patterns and features that are not inclu
 | Badge | `badge` | Render a metafield-driven badge span with background and text colors. |
 | Base Class | `bclass`, `bc` | Insert base BEM class attribute using the current filename. |
 | Image Tag | `imgtag` | Render `image_tag` with width, alt, lazy loading, and section-scoped classes. |
-| Block Content | `cb`, `contentblock` | Capture and render a `content_for 'block'` placeholder. |
-| Blocks Content | `cbs`, `contentblocks` | Output `content_for 'blocks'` placeholder. |
-| Product Block Content | `cbp`, `contentblockproduct` | Render a product-specific block via `content_for`. |
-| Swiper Block Content | `cbsp, contentblockswiper` | Create `_td-slider` block for Swiper slides or fallback when empty. |
+| Block Content | `cb`, `contentblock`, `cfb` | Capture and render a `content_for 'block'` placeholder. |
+| Blocks Content | `cbs`, `contentblocks`, `cfbs` | Output `content_for 'blocks'` placeholder. |
+| Product Block Content | `cbp`, `contentblockproduct`, `cfbp` | Render a product-specific block via `content_for`. |
+| Swiper Block Content | `cbsp`, `contentblockswiper`, `cfbsp` | Create `_td-slider` block for Swiper slides or fallback when empty. |
 | Render TD Badge | `rbdg`, `rtdbadge`, `rabadge`, `rbdge` | Render `td-badge` snippet for an object with optional class. |
 | If Title | `ifti`, `iti`, `iftitle` | Conditional heading if the title setting is present. |
 | If Text | `ifte`, `ite`, `iftext` | Conditional text wrapper if the text setting is present. |

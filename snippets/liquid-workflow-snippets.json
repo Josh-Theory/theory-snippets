@@ -16,6 +16,14 @@
       "  \"name\": \"${TM_FILENAME_BASE/([^-]*)(-?)/${1:/capitalize}${2:+ }/g}\",",
       "  \"settings\": [",
       "  ],",
+      "\"blocks\": [",
+      "\t{",
+      "\t\t\"type\": \"@theme\",",
+      "\t},",
+      "\t{",
+      "\t\t\"type\": \"@app\",",
+      "\t}",
+      "]",
       "  \"presets\": [",
       "    {",
       "      \"name\": \"${TM_FILENAME_BASE/([^-]*)(-?)/${1:/capitalize}${2:+ }/g}\",",
@@ -26,10 +34,45 @@
       "{% endschema %}" 
     ]
   },
+  "Project Block Boilerplate": {
+    "prefix": ["pbbp"],
+    "body": [
+      "{% doc %}",
+      "  ${TM_FILENAME_BASE} block",
+      "",
+      "  @example",
+      "  {% content_for 'block', type: '${TM_FILENAME_BASE}', id: '${TM_FILENAME_BASE/^_+//}-1' %}",
+      "{% enddoc %}",
+      "",
+      "$0",
+      "",
+      "{% schema %}",
+      "{",
+      "  \"name\": \"${TM_FILENAME_BASE/([^-]*)(-?)/${1:/capitalize}${2:+ }/g}\",",
+      "  \"settings\": [",
+      "  ],",
+      "\"blocks\": [",
+      "\t{",
+      "\t\t\"type\": \"@theme\",",
+      "\t},",
+      "\t{",
+      "\t\t\"type\": \"@app\",",
+      "\t}",
+      "]",
+      "  \"presets\": [",
+      "    {",
+      "      \"name\": \"${TM_FILENAME_BASE/([^-]*)(-?)/${1:/capitalize}${2:+ }/g}\",",
+      "      \"category\": \"SB\"",
+      "    }",
+      "  ]",
+      "}",
+      "{% endschema %}" 
+    ]
+  },
   "Project Section Boilerplate": {
     "prefix": ["psbp"],
     "body": [
-      "<div class='${TM_FILENAME_BASE}__container'  style=\"{% render 'td-spacing-padding', settings: section.settings %}\">",
+      "<div class='${TM_FILENAME_BASE}__container section section--page-{{ section.settings.section_width }}'  style=\"{% render 'td-spacing-padding', settings: section.settings %}\">",
       "  $0",
       "</div>",      
       "{%- stylesheet -%}",
@@ -150,6 +193,14 @@
       "        \"visible_if\": \"{{ section.settings.custom_padding_mobile }}\"",
       "      }",
       "    ],",
+      "\"blocks\": [",
+      "\t{",
+      "\t\t\"type\": \"@theme\",",
+      "\t},",
+      "\t{",
+      "\t\t\"type\": \"@app\",",
+      "\t}",
+      "]",
       "  \"presets\": [",
       "    {",
       "      \"name\": \"${TM_FILENAME_BASE/([^-]*)(-?)/${1:/capitalize}${2:+ }/g}\",",
@@ -481,25 +532,25 @@
     ]
   },
   "Block Content": {
-    "prefix": ["cb", "contentblock"],
+    "prefix": ["cb", "contentblock", "cfb"],
     "body": [
       "{% content_for 'block', type: '${1:${TM_FILENAME_BASE}}', id: '${1:${TM_FILENAME_BASE}}' %}"
     ]
   },
   "Blocks Content": {
-    "prefix": ["cbs", "contentblocks"],
+    "prefix": ["cbs", "contentblocks", "cfbs"],
     "body": [
       "{% content_for 'blocks' %}"
     ]
   },
   "Product Block Content": {
-    "prefix": ["cbp", "contentblockproduct"],
+    "prefix": ["cbp", "contentblockproduct", "cfbp"],
     "body": [
       "{% content_for 'block', type: '${1:${TM_FILENAME_BASE}}', id: 'product-details', closest.product: closest.product %}"
     ]
   },
   "Swiper Block Content": {
-    "prefix": ["cbsp", "contentblockswiper"],
+    "prefix": ["cbsp", "contentblockswiper", "cfbsp"],
     "body": [
       "{% # theme-check-disable %}",
       "{% comment %} Disable 'content_for block capture' check {% endcomment %}",
