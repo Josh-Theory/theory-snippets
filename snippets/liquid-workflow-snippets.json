@@ -72,7 +72,7 @@
   "Project Section Boilerplate": {
     "prefix": ["psbp"],
     "body": [
-      "<div class='${TM_FILENAME_BASE}__container section color-{{ section.settings.color_scheme }} section--page-{{ section.settings.section_width }}'  style=\"{% render 'td-spacing-padding', settings: section.settings %}\">",
+      "<div class='${TM_FILENAME_BASE}__container section td-spacing-style color-{{ section.settings.color_scheme }} section--page-{{ section.settings.section_width }}'  style=\"{% render 'td-spacing-padding', settings: section.settings %}\">",
       "  $0",
       "</div>",      
       "{%- stylesheet -%}",
