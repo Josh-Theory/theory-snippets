@@ -212,9 +212,9 @@
     "prefix": "liquid",
     "description": "Theme tag: liquid",
     "body": [
-      "{% liquid %}",
+      "{% liquid",
       "\t$1",
-      "{% endliquid %}"
+      "%}"
     ]
   },
   "Tag liquid, whitespaced": {
