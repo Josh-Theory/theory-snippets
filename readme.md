@@ -1,10 +1,10 @@
-## Theory Snippets
+## Theory Shopify Snippets
 
-Liquid, CSS, and JS snippets for common patterns and features that are not included in the official extension. These will pull from the filename to generate classes, schema names, etc. DM Josh for requests.
+Liquid, CSS, and JS snippets for common Shopify patterns and features that are not included in the official extension. These will pull from the filename to generate classes, schema names, etc. DM Josh for requests.
 
 ## Table of contents
 
- - [Liquid Workflow Snippets (38)](#liquid-workflow-snippets-38)
+- [Liquid Workflow Snippets (38)](#liquid-workflow-snippets-38)
 - [JavaScript Snippets (1)](#javascript-snippets-1)
 - [CSS Snippets (24)](#css-snippets-24)
 - [Liquid Language Snippets](#liquid-language-snippets)
@@ -17,13 +17,16 @@ Liquid, CSS, and JS snippets for common patterns and features that are not inclu
 
 ## Liquid Workflow Snippets (38)
 
+All workflow snippets are subject to change, but most have been static for > 24 months
+\* indicates an unstable/actively being workshopped snippet
+
 | Title | Prefixes | Description |
 |---|---|---|
 | Block Boilerplate | `bbp` | Boilerplate for a block file with example `content_for` and schema including theme/app blocks. |
-| Project Block Boilerplate | `pbbp` | Project block scaffold with example `content_for` and schema including theme/app blocks. |
+| Project Block Boilerplate* | `pbbp` | Project block scaffold with example `content_for` and schema including theme/app blocks. |
 | Section Boilerplate | `sbp` | Modern section scaffold with attribute-based styles, color/padding settings, and schema. |
 | Section Boilerplate Baseline | `sbpb` | Minimal section boilerplate with only the name/class/tag schema and presets. |
-| Project Section Boilerplate | `psbp` | Project section scaffold with color scheme, width, desktop/mobile padding controls, and presets. |
+| Project Section Boilerplate* | `psbp` | Project section scaffold with color scheme, width, desktop/mobile padding controls, and presets. |
 | Legacy Section Boilerplate Baseline | `lsbpb` | Minimal Shopify section with schema and stylesheet link. |
 | Legacy Section Boilerplate | `lsbp` | Full Shopify section scaffold with color and padding settings and schema. |
 | Legacy Swiper Boilerplate | `lswp`, `lswiper` | Liquid markup to render a Swiper slider with captured options and slides. |
