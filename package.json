@@ -2,8 +2,12 @@
   "name": "td-snippets",
   "displayName": "TD Snippets",
   "description": "Shopify theme blocks, modern schema, actively maintained.",
-  "version": "1.3.7",
+  "version": "1.3.8",
   "publisher": "josh-theory",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Josh-Theory/theory-snippets.git"
+  },
   "engines": {
     "vscode": "^1.81.0"
   },
